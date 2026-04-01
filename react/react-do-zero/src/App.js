@@ -32,8 +32,9 @@ const App = () => {
                 <button onClick={handleAddUser}>Adicionar</button>
             </div>            
             <hr />
-            {usuarios.map((item) => (
-                <p>{item}</p>
+
+            {usuarios.map((item, index) => (
+                <p key={index}>{item}</p>
             ))}
         </div>
     );
