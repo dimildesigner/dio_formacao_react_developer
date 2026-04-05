@@ -9,11 +9,11 @@ function ItemRepo({repo, handleRemoveRepo}) {
   }
 
   return (
-    <ItemContainer onClick={handleRemove}>
+    <ItemContainer>
         <h3>{repo.name}</h3>
         <p>{repo.full_name}</p>        
-        <a href={repo.html_url} rel="noreferrer" target="_blank" className="ver"> ➡ VERIFICAR REPOSITÓRIO</a> <br />
-        <a href="#" rel="noreferrer" className="remover"> ➡ REMOVER</a>
+        <a href={repo.html_url} rel="noreferrer" target="_blank" className="ver"> ➡ VERIFICAR REPOSITÓRIO ✔</a> <br />
+        <a href={repo.html_url} onClick={(e) => {e.preventDefault(); handleRemove();}} className="remover"> ➡ REMOVER ✖</a>
         <hr />
     </ItemContainer>
   )
